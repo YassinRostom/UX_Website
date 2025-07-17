@@ -1,0 +1,148 @@
+/********** Servicing Page CSS Template **********/
+/* Template for styling the servicing page, covering sections with image/text layouts, service packages, and service listings. */
+
+/***** Section 1 (IMAGE/TEXT) *****/
+/* Container for a large image with text overlay, ensuring content is centered and overlay text is readable against the image background. */
+.img4-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styles for the image to cover the container fully, maintaining aspect ratio and centering the image. */
+.img4 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Absolute positioning for text overlay on the image, with white color for contrast and centered alignment. */
+.img4-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    max-width: 90%;
+    padding: 0 20px;
+}
+
+/* Section 2: Service Packages */
+/* Container styling for service packages cards provid spacing and centered Cards/text alignment. */
+.service-package {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styling for individual service packages, with shadow for depth, consistent height, and adjusted width. */
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    height: 300px;
+    width: 80%;
+}
+
+/* Styles for card titles, with bold font for emphasis and black color for readability. */
+.card-title {
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Styling for card text, ensuring readability with black color. */
+.card-text {
+    color: #000000;
+}
+
+/* Styles for secondary action buttons on cards, setting font size, width, and custom colors for brand consistency. */
+.btn-secondary {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Hover state styles for secondary buttons, changing background and border colors for a hover effect. */
+.btn-secondary:hover {
+    background-color: #90b8fa;
+    border-color: #90b8fa;
+} 
+
+/******* Section 3 (Services We Provide) *******/
+/* Container for services we provide section, with styling similar to Section 1 for consistency. */
+.img5-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 32px;
+}
+
+/* Image styling for the services section, ensuring full coverage and centering similar to Section 1. */
+.img5 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Text styling for the services section, positioned relative to the top left but covering the full width of the container. */
+.img5-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    padding-top: 70px;
+}
+
+/* Unordered list styling for listing services, removing default list styling and setting consistent width for items. */
+.service-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 350px;
+}
+
+/* List item styling, providing spacing and positioning for custom list markers. */
+.service-list li {
+    padding: 0.5em 0;
+    padding-left: 1.5em;
+    text-align: left;
+    position: relative;
+    width: 350px;
+}
+
+/* Custom list marker styling, using a ✔ character as the marker with absolute positioning. */
+.service-list li::before {
+    content: '✔';
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    width: 350px;
+}
+
+/* Custom column styling to override Bootstrap's default column padding, adjusting flex basis and width for custom layout needs. */
+.custom-col-md-4 {
+    flex: 0 0 auto;
+    width: 20%;
+}

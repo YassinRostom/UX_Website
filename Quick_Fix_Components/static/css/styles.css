@@ -1,0 +1,329 @@
+/********** Global CSS Template **********/
+/* This CSS file will apply to all the website pages. Defines global styles and variables. */
+
+/* Global variable definitions, setting primary, light, and dark color themes for the website. */
+:root {
+    --primary: #3a85ff;
+    --light: #EFF5FF;
+    --dark: #1b2c51;
+}
+
+/* Styles for a 'Back to Top' button, initially hidden and positioned at the bottom right of the viewport. */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/* Global body styles, setting the font family to 'Roboto' and base font size to 20px. */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+/************ Home Page ************/
+/* Styles specific to the Home Page, including loading spinners, navigation bars, media sections, and more. */
+
+/* Styles for the loading spinner, initially invisible but becomes visible and opaque when active. */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Navbar link styles, including color, spacing, and text transformation. Adjusts for responsive design. */
+.navbar .navbar-nav .nav-link {
+    margin-right: 50px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    outline: none;
+}
+
+/* Changes the color of navbar links on hover or when active to the primary color. */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+/* Adjusts navbar link padding and margin in a responsive context for smaller screens. */
+@media (max-width: 992px) {
+    .navbar .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+/* Styles for dropdown menus in the navbar, making them invisible initially and smoothly transitioning them into view. */
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* Defines the size of the navbar brand and button for consistent height across the navbar. */
+.navbar .navbar-brand,
+.navbar a.btn {
+    height: 75px;
+}
+
+/* Sets the default color and font weight for navbar links to dark and bold, respectively. */
+.navbar .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+/* Styles for making the navbar sticky and animating its appearance with a smooth transition. */
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+/******** Home Page Section 1: Media ********/
+/* Positions the video or image as a background in the media section, covering the entire area. */
+.HomePage-Media {
+    position: relative;
+    height: 500px;
+}
+
+.HomePage-Media .header-video {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/******** Home Page Section 3: Image and Text Overlays ********/
+/* This section ensures images have overlays with text, enhancing readability against complex image backgrounds. */
+/* Ensures images fill their container's width, adjust height automatically to maintain aspect ratio, and display as block elements to avoid inline gaps. */
+.img3-cont img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Styles for container holding the static image, making it a block-level element and positioning it relative to allow absolutely positioned child elements. */
+.img3-static {
+    display: block;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+/* Positions text overlay in the center of its parent, with white text color for contrast, centered text, and padding for spacing. The transform property ensures precise centering. */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    max-width: 90%;
+    padding: 10px;
+}
+
+/* Media query for devices with max width of 992px, optimizing text overlay by adjusting font size and max-width for smaller screens, enhancing readability. */
+@media (max-width: 992px) {
+    .text-overlay {
+        font-size: 14px;
+        max-width: 95%;
+    }
+}
+
+/* Styles for the reviews section, leveraging flexbox for layout, ensuring alignment, spacing, and a white text color for readability against potentially dark backgrounds. */
+.workshop-reviews {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 8px;
+}
+
+/* Centralizes review summary text to aid focus and visual balance. */
+.reviews-summary {
+    text-align: center;
+}
+
+/* Star ratings in reviews, using gold color for visual emphasis and consistency with common rating systems. */
+.QuickFix-stars, .reviews-stars {
+    text-align: center;
+    color: #ffc107;
+}
+
+/* Styles for displaying the numerical rating value, using larger text for emphasis and bold weight for importance. */
+.reviews-rating {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Color styling for the count of reviews, using black for readability and contrast with the background. */
+.reviews-count {
+    color: #000000;
+}
+
+/* Flexbox layout for review containers, allowing for responsive arrangement and spacing around each review. */
+.reviews-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Defines the default size and margin for individual review items, ensuring consistent spacing and layout. */
+.review-item {
+    flex-basis: calc(40%);
+    margin: 10px 0px;
+}
+
+/* Individual review box styling, with white text on a dark background, rounded corners for aesthetics, and padding for internal spacing. */
+.review {
+    color: #FFFFFF;
+    background: #1b2c51;
+    padding: 16px;
+    margin: 10px 0;
+    position: relative;
+    border-radius: 32px;
+}
+
+/* Creates a "speech bubble" effect for reviews, using CSS pseudo-elements for a decorative arrow pointing downwards. */
+.review::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 10%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
+}
+
+/* Text within reviews is justified for a clean, uniform appearance, with padding for a balanced layout. */
+.review-text {
+    text-align: justify;
+    padding: 0 16px;
+}
+
+/* Styles for the reviewer's name, making it bold and left-aligned for emphasis and clear association with the review text. */
+.reviewer-name {
+    color: #000000;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+/* Star ratings by the reviewer's name, visually consistent with the overall rating display for coherence. */
+.reviewer-stars {
+    text-align: left;
+    font-size: 16px;
+    color: #ffc107;
+}
+
+/* Responsive adjustments for review items on smaller screens, ensuring full width utilization and adjusted margins for better mobile readability. */
+@media (max-width: 992px) {
+    .review-item {
+        font-size: 14px;
+        flex-basis: 100%;
+        margin: 10px 256px;
+    }
+}
+
+/********** Footer ************/
+/* Hover state for a button in the footer, changing the background color for visual feedback. */
+.ms-btn:hover {
+    background-color: rgb(76, 91, 121);
+}
+
+/* General footer styles, setting the background color, font size, and spacing of elements. */
+.footer {
+    background-color: var(--dark);
+}
+
+.footer p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Styles for social media buttons in the footer, including size, color, and hover effects. */
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+/* Styles for link buttons in the footer, adjusting display, color, and hover effects for visual consistency and feedback. */
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+/* Copyright information in the footer, including styling for text, links, and hover effects. */
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .copyright a:hover {
+    color: var(--primary);
+}

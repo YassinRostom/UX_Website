@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Quick Fix</title>
+
+    <!-- Enable Proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font = Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+
+    <!-- Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/styles-servicing.css') }}" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+</head>
+
+<body>
+    <!-- Load Page Start -->
+    <div id="spinner"
+        class="show bg-white translate-middle position-fixed w-100 vh-100 top-50 d-flex start-50 justify-content-center align-items-center">
+        <div class="text-primary spinner-grow" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Load Page End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        <a href="{{url_for('core.index')}}" class="navbar-brand d-flex align-items-center px-4">
+            <img class="me-2" src="{{ url_for('static', filename='img/logo.png') }}" style="width: 40px; height: 40px;">
+            <h1 class="m-0 text-dark">Quick Fix</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{{url_for('core.mot')}}" class="nav-item nav-link">MOT</a>
+                <a href="{{url_for('core.servicing')}}" class="nav-item nav-link active">SERVICING</a>
+                <a href="{{url_for('core.about')}}" class="nav-item nav-link">ABOUT US</a>
+                <a href="{{url_for('core.contact')}}" class="nav-item nav-link">CONTACT US</a>
+                <a href="{{url_for('core.booking')}}" class="nav-item nav-link">ONLINE BOOKING</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Section 1 (Image/Text) Start -->
+    <div class="img4-container">
+        <!-- Insert Background Image -->
+        <img src="{{ url_for('static', filename='img/img4.jpg') }}" class="img4">
+        <!--  Insert Text -->
+        <div class="img4-text">
+            <h1 class="mb-3" style="color: white;">Quick Fix</h1>
+            <h1 class="mb-3" style="color: white;">Car Servicing & Maintenance</h1>
+        </div>
+    </div>
+    <!-- Section 1 End -->
+
+    <!-- Section 2 (SPECIAL SERVICE PACKAGE) Start -->
+    <div class="container text-center">
+        <h2 class="my-4" style="color: rgb(0, 0, 0);">QUICK FIX SPECIAL SERVICE PACKAGE</h2>
+        <div class="row">
+            <!-- Interim Service Card -->
+            <div class="col-md-4 service-package">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">INTERIM</h5>
+                        <p class="card-text">Usually done bi-yearly or every 6,000 miles for high-mileage vehicles
+                            needing more frequent checks. Also ideal for low-mileage cars as an interim service.</p>
+                        <a href="{{url_for('core.booking')}}" class="btn btn-secondary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Service Card -->
+            <div class="col-md-4 service-package">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">FULL</h5>
+                        <p class="card-text"> This yearly service cover extensive inspections of crucial components and
+                            fluids. Recommended annually for high mileage or every 12,000 miles for lower mileage.</p>
+                        <a href="{{url_for('core.booking')}}" class="btn btn-secondary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Major Service Card -->
+            <div class="col-md-4 service-package">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">MAJOR</h5>
+                        <p class="card-text"> Ideal for vehicles under the manufacturer's warranty, covers a
+                            comprehensive replacement of filters, fluids, oil, and spark plugs. It's advised every
+                            24,000 miles or every two years.</p>
+                        <a href="{{url_for('core.booking')}}" class="btn btn-secondary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section 2 End -->
+
+    <!-- Section 3 Start -->
+    <div class="img5-container">
+        <!-- Insert Background Image -->
+        <img src="{{ url_for('static', filename='img/img5.png') }}" class="img5">
+        <div class="img5-text">
+            <h1 class="mb-3" style="color: white;">Services We Provide</h1>
+            <p class="mb-3" style="color: white;">At Quick Fix, we have many services for your cars. Here are some
+                things we can do.</p>
+            <div class="row justify-content-center">
+                <!-- Services Column 1 -->
+                <div class="col-md-4  custom-col-md-4">
+                    <ul class="service-list">
+                        <li>Gearbox Overhaul & Fitting</li>
+                        <li>Brake System Service</li>
+                        <li>Tyre Installation Services</li>
+                        <li>Precision Wheel Balancing</li>
+                        <li>Tyre Maintenance</li>
+                    </ul>
+                </div>
+                <!-- Services Column 2 -->
+                <div class="col-md-4  custom-col-md-4">
+                    <ul class="service-list">
+                        <li>Fuel System Servicing</li>
+                        <li>Muffler System Services</li>
+                        <li>Radiator Service & Care</li>
+                        <li>Electrical System Analysis</li>
+                        <li>Advanced Diagnostic Checks</li>
+                    </ul>
+                </div>
+                <!-- Services Column 3 -->
+                <div class="col-md-4  custom-col-md-4">
+                    <ul class="service-list">
+                        <li>Engine Tune-Ups</li>
+                        <li>Lubrication Service</li>
+                        <li>Cooling System Refurbishment</li>
+                        <li>Emission Inspection</li>
+                        <li>Vintage Vehicle Restoration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section 3 End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-light footer mt-0 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-2">
+            <div class="row g-5">
+                <!-- Column 1 : Logo / Contact Details / Social Media Icons -->
+                <div class="col-lg-3 col-md-6" style="margin-top: 32px">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}"
+                            style="width: 32px; height: 32px; margin-right: 10px;">
+                        <h2 class="text-light m-0">Quick Fix</h2>
+                    </div>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>5 AY St, Taunton, TA1 1QE</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+44 7701 097703</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>QuickFix@gmail.com</p>
+                    <!-- Social Media Icons -->
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social rounded-circle" href="#"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href="#"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href="#"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href="#"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2 : Opening Hours Details -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">OPENING HOURS</h5>
+                    <p class="mb-2">Monday - Friday: 8:00AM to 6:00PM</p>
+                    <p class="mb-2">Saturday: 8:00AM to 1:00PM</p>
+                    <p class="mb-2">Sunday: Closed</p>
+                </div>
+                <!-- Column 3 : Quick Links to website pages -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">QUICK LINKS</h5>
+                    <a class="btn btn-link" href="{{url_for('core.mot')}}">MOT</a>
+                    <a class="btn btn-link" href="{{url_for('core.servicing')}}">SERVICING</a>
+                    <a class="btn btn-link" href="{{url_for('core.about')}}">ABOUT US</a>
+                    <a class="btn btn-link" href="{{url_for('core.contact')}}">CONTACT US</a>
+                    <a class="btn btn-link" href="{{url_for('core.booking')}}">ONLINE BOOKING</a>
+                </div>
+                <!-- Column 4 : Stay in the loop -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Stay in the Loop</h5>
+                    <p>Get exclusive access to seasonal promotions and car care tips</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <!-- Copy Rights -->
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Quick Fix</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a class="border-bottom" href="#">Yas Rostom</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/tempusdominus/js/moment.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+
+    <!-- Javascript Template -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>

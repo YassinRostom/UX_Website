@@ -1,0 +1,81 @@
+/* MOT style.css */
+
+/********* MOT Page Section 1: MOT Card *********/
+/* The .card-custom class styles a card component with a shadow, rounded corners, and custom dimensions. 
+It uses a white background and sets the text color based on a variable. */
+.card-custom {
+  border: none;
+  border-radius: 16px;
+  background-color: white;
+  color: var(--dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height: 200px;
+  max-width: 80%;
+}
+
+/* The .link-custom class styles a button or link that appears at the bottom of the card. It has a bold, 
+white text on a dark background with a subtle border and rounded bottom corners. */
+.link-custom {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--primary);
+    border-top: 3px solid rgb(170, 168, 168);
+    border-radius: 0 0 16px 16px;
+    transition: background-color 0.3s;
+}
+
+/* Changes the background color of the link/button on hover, maintaining the text color and decoration. */
+.link-custom:hover {
+  background-color: rgb(126, 171, 243);
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* The .card-body-custom class styles the container of the card's content, spacing it nicely and aligning its items to start. */
+.card-body-custom {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+/* Styles the title of the card with a larger font size, bottom margin, and dark color variable. */
+.card-title-custom {
+  font-size: 1.5em;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+
+/* Styles the text within the card with a standard font size, bottom margin, and dark color variable for readability. */
+.card-text-custom {
+  font-size: 1em;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+/********* MOT Page Section 1: Image/Text Contaier *********/
+/* The .text-container class provides styling for a container that holds text, with padding and a white background for contrast. */
+.text-container {
+  padding: 20px;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Styles the heading within the text container with a larger font size, bottom margin, and a white background for emphasis. */
+.text-container h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  background-color: white;
+}
+
+/* Styles paragraphs within the text container with a comfortable font size and bottom margin for readability. */
+.text-container p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
