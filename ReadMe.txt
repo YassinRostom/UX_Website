@@ -11,7 +11,8 @@ Instructions to run the web application:
 1. Open the command prompt and ensure it is pointing to the project directory "\5591020_Code".
 2. Create a virtual environment by running the command: python -m venv .venv_flask
 3. Activate the virtual environment by running: .\.venv_flask\Scripts\activate
-4. Start the application by executing: python app.py
+4. Setup Requirements.txt: pip install -r requirements.txt
+5. Start the application by executing: python app.py
 5. Open Google Chrome and navigate to the local web address "http://127.0.0.1:5000/" to view the web application.
 
 Video 2 will show the steps to run the web application.
